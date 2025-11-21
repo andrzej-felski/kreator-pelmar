@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<title>Kreator Ofert Pelmar</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+<div class="kreator-wrapper">
+  <div class="left-side">
+    <h2>Kreator ofert Pelmar</h2>
+
+    <label for="serviceTypeSelect">Wybierz typ usługi:</label>
+    <select id="serviceTypeSelect" disabled><option value="">-- wybierz --</option></select>
+
+    <label for="lengthSelect">Wybierz długość umowy:</label>
+    <select id="lengthSelect" disabled><option value="">-- wybierz --</option></select>
+
+    <label for="packageSelect">Wybierz pakiet:</label>
+    <select id="packageSelect" disabled><option value="">-- wybierz --</option></select>
+
+    <div id="devicesContainer"></div>
+
+    <button id="addPackageBtn" disabled>Dodaj pakiet</button>
+    <button id="addDomJednorodzinnyBtn">Opłata – Dom jednorodzinny</button>
+    <button id="addEfakturaBtn">Rabat za e-fakturę</button>
+  </div>
+
+  <div class="right-side">
+    <h3>Wybrane pakiety</h3>
+    <div id="selectedPackages"></div>
+
+    <button id="generateOfferBtn" disabled>Generuj ofertę</button>
+
+    <div class="summary" id="offerSummary"></div>
+    <button id="savePdfBtn">Zapisz do PDF</button>
+  </div>
+</div>
+
+<script src="LISTA OFERT.js"></script>
+<script src="skrypt/Kreator.js"></script>
+
+</body>
+</html>
