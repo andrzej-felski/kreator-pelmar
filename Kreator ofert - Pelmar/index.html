@@ -144,7 +144,7 @@ const packages = [
 // Internet światłowodowy - Gorąca trzydziestka 2025 11/25
   {
     typ: 'Internet światłowodowy',
-    nazwa: 'Black Week - 300/15 Mb/s + HBO Max',
+    nazwa: 'Oferta świąteczna - 300/15 Mb/s + HBO Max',
     cena: 47.31,
     cenaAktywacji: 34.98,
     dlugoscUmowy: 24,
@@ -155,7 +155,7 @@ const packages = [
   },
   {
     typ: 'Internet światłowodowy',
-    nazwa: 'Black Week - 650/30 Mb/s + HBO Max',
+    nazwa: 'Oferta świąteczna - 650/30 Mb/s + HBO Max',
     cena: 67.31,
     cenaAktywacji: 34.98,
     dlugoscUmowy: 24,
@@ -1815,12 +1815,12 @@ function generateOffer() {
   if (hasStudenckiRaj) sumaCenaPromocyjna -= 2.09;
 
   const hasPromo = selectedPackages.some(pkg =>
-    pkg.nazwa.includes("Halloween") || pkg.nazwa.includes("Black Week") || pkg.nazwa.includes("Kontynuacja")
+    pkg.nazwa.includes("Halloween") || pkg.nazwa.includes("Oferta świąteczna") || pkg.nazwa.includes("Kontynuacja")
   );
   if (hasPromo) sumaCena -= 1.19;
 
   const hasBlackWeekOrKontynuacja = selectedPackages.some(pkg =>
-    pkg.nazwa.includes("Black Week") || pkg.nazwa.includes("Kontynuacja")
+    pkg.nazwa.includes("Oferta świąteczna") || pkg.nazwa.includes("Kontynuacja")
   );
   if (hasBlackWeekOrKontynuacja && hasPromotion) sumaCenaPromocyjna -= 3.69;
 
