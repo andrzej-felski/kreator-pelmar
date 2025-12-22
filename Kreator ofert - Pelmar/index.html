@@ -1880,8 +1880,8 @@ function generateOffer() {
   );
   if (hasBlackWeekOrKontynuacja && hasPromotion) sumaCenaPromocyjna -= 3.69;
 
-  const sumaZStala = sumaCena + additionalFee;
-  const sumaPromocyjnaZStala = sumaCenaPromocyjna + additionalFee;
+const sumaZStala = Math.max(0, sumaCena + additionalFee);
+const sumaPromocyjnaZStala = Math.max(0, sumaCenaPromocyjna + additionalFee);
 
   const promText = hasPromotion
             ? `Cena podczas promocji: ${sumaPromocyjnaZStala.toFixed(2)} zł/mies. 
